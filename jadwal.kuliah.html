@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Kuliah</title>
+    <style type="text/css"></style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #32312f;
+            font-family: sans-serif;
+        }
+        .table-container {
+            padding: 0 10%;
+            margin: 40px auto 0;
+        }
+        .heading {
+            font-size: 40px;
+            text-align: center;
+            color: #f1f1f1;
+            margin-bottom: 40px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table thead {
+            background-color: #ee2828;
+        }
+        .table thead tr th {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.35px;
+            color: #FFFFFF;
+            opacity: 1;
+            padding: 12px;
+            vertical-align: top;
+            border: 1px solid #dee2e685;
+        }
+        .table tbody tr td {
+            font-size: 14px;
+            letter-spacing: 0.35px;
+            font-weight: normal;
+            color: #f1f1f1;
+            background-color: #3c3f44;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #dee2e685;
+        }
+        .table .text_open {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.35px;
+            color: #FF1046;
+        }
+        .button {
+            border: none;
+            color: darkcyan;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+            .button1 {
+                background-color: #32312f;
+            }
+            .button1:hover {
+            background-color: #395144;
+            color: white;
+            }
+        @media (max-width: 768px) {
+            .table thead {
+                display: none;
+            }
+            .table, .table tbody,.table tr,.table td {
+                display: block;
+                width: 100%;
+            }
+            .table tr {
+                margin-bottom: 15px;
+            }
+            .table tbody tr td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            .table td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: 600;
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h1 class="heading">Jadwal Kuliah</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>KODE MK</th>
+                    <th>NAMA MATA KULIAH</th>
+                    <th>SKS</th>
+                    <th>KELAS</th>
+                    <th>HARI</th>
+                    <th>JAM</th>
+                    <th>RUANG</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="NO">1</td>
+                    <td data-label="KODE MK">C31050201</td>
+                    <td data-label="NAMA MATA KULIAH">STRUKTUR DATA</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">B</td>
+                    <td data-label="HARI">SENIN</td>
+                    <td data-label="JAM">08.00-0940</td>
+                    <td data-label="RUANG">LAB LJT</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">2</td>
+                    <td data-label="KODE MK">C31050215</td>
+                    <td data-label="NAMA MATA KULIAH">PEMROSESAN DATA TERDISTRIBUSI</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">E</td>
+                    <td data-label="HARI">SENIN</td>
+                    <td data-label="JAM">10.00-11.40</td>
+                    <td data-label="RUANG">503</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">3</td>
+                    <td data-label="KODE MK">C31050205</td>
+                    <td data-label="NAMA MATA KULIAH">PEMROGRAWAN WEB</td>
+                    <td data-label="SKS">3</td>
+                    <td data-label="KELAS">B</td>
+                    <td data-label="HARI">SELAS</td>
+                    <td data-label="JAM">08.00-10.30</td>
+                    <td data-label="RUANG">LAB DAS 2</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">4</td>
+                    <td data-label="KODE MK">C31050211</td>
+                    <td data-label="NAMA MATA KULIAH">TEKNIK DIGITAL</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">B</td>
+                    <td data-label="HARI">SELAS</td>
+                    <td data-label="JAM">13.00-14.40</td>
+                    <td data-label="RUANG">LAB LINUX</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">5</td>
+                    <td data-label="KODE MK">C31050213</td>
+                    <td data-label="NAMA MATA KULIAH">SISTEM MULTIMEDIA</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">G</td>
+                    <td data-label="HARI">RABU</td>
+                    <td data-label="JAM">08.00-09.40</td>
+                    <td data-label="RUANG">LAB MULTI</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">6</td>
+                    <td data-label="KODE MK">C31050207</td>
+                    <td data-label="NAMA MATA KULIAH">KOMUNIKASI DATA</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">B</td>
+                    <td data-label="HARI">SENIN</td>
+                    <td data-label="JAM">13.00-14.40</td>
+                    <td data-label="RUANG">905</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">7</td>
+                    <td data-label="KODE MK">C31050209</td>
+                    <td data-label="NAMA MATA KULIAH">BASIS DATA</td>
+                    <td data-label="SKS">3</td>
+                    <td data-label="KELAS">B</td>
+                    <td data-label="HARI">KAMIS</td>
+                    <td data-label="JAM">13.00-15.30</td>
+                    <td data-label="RUANG">LAB DAS 2</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">8</td>
+                    <td data-label="KODE MK">C31050203</td>
+                    <td data-label="NAMA MATA KULIAH">SISTEM OPERASI</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">B</td>
+                    <td data-label="HARI">KAMIS</td>
+                    <td data-label="JAM">15.30-17.10</td>
+                    <td data-label="RUANG">911</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">9</td>
+                    <td data-label="KODE MK">C31050217</td>
+                    <td data-label="NAMA MATA KULIAH">PEMROGRAMAN OBJEK</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">B</td>
+                    <td data-label="HARI">JUMAT</td>
+                    <td data-label="JAM">08.00-0940</td>
+                    <td data-label="RUANG">LAB LJT</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">10</td>
+                    <td data-label="KODE MK">C31050307</td>
+                    <td data-label="NAMA MATA KULIAH">EXPERT SYSTEM</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">A</td>
+                    <td data-label="HARI">SABTU</td>
+                    <td data-label="JAM">09.00-10.40</td>
+                    <td data-label="RUANG">LAB LJT</td>
+                </tr>
+                <tr>
+                    <td data-label="NO">11</td>
+                    <td data-label="KODE MK">C31050301</td>
+                    <td data-label="NAMA MATA KULIAH">PENGANTAR TEKNOLOGI SCADA</td>
+                    <td data-label="SKS">2</td>
+                    <td data-label="KELAS">A</td>
+                    <td data-label="HARI">SABTU</td>
+                    <td data-label="JAM">13.00-14.40</td>
+                    <td data-label="RUANG">LAB 901  </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="index.html" class="button button1">Back</a></p>
+</body>
+</html>

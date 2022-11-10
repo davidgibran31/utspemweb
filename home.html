@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <style type="text/css"></style>
+        <style>
+            *{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.profile{
+    width: 100%;
+    float: left;
+    color: darkgreen;
+    background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+}
+.wrapper_profile{
+    background-color: rgba(127, 255, 212, 0.7);
+    padding: 30px 20px;
+    float: left;
+    width: 100%;
+}
+.photo_name{
+    width: 50%;
+    float: left;
+    padding: 15px;
+    margin: 0 25%;
+    background-color: rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+}
+.photo_name img{
+    height: 160px;
+    width: 160px;
+    border-radius: 100%;
+    float: left;
+}
+.photo_name h1{
+    padding: 40px 50px;
+    float: left;
+}
+.detail_profile{
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.detail_profile h3{
+    margin-block-end: 2px;
+}
+.detail_profile p{
+    margin-block-start: 2px;
+}
+.hobbies{
+    width: 100%;
+    background-color: rgba(127, 255, 212, 0.7);
+    margin-top: 5px;
+    text-align: center;
+}
+
+.hobbies h3{
+    text-align: center;
+    background-color: aquamarine;
+    padding:  20px;
+    margin: 0;
+}
+.flex_box{
+    display: flex;
+}
+.flex_box li{
+    flex: auto;
+    list-style: none;
+    padding: 30px;
+}
+.flex_box img{
+    width: 100%;
+    padding: 10%;
+    border-radius: 5%;
+    background-color: aquamarine;
+}
+.flex_box h4{
+    text-align: center;
+}
+.skills_experience{
+    width: 100%;
+    background-color: aquamarine;
+    margin-top: 5px;
+    float: left;
+}
+.skills{
+    float: left;
+    width: 50%;
+    border-right: darkgreen;
+    border-style: none solid none none;
+    padding: 20px;
+}
+.experiences{
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+.skills h3{
+    float: left;
+    width: 100%;
+    text-align: right;
+    padding: 20px 0 20px 20px;
+    margin: 0;
+}
+.skill{
+    float: left;
+}
+.skill img{
+    float: right;
+    width: 50px;
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.skill_desc{
+    float: right;
+    width: 70%;
+}
+
+.skill_desc h4{
+    float: right;
+    text-align: right;
+    margin: 10px;
+    width: 60%;
+}
+.skill_desc p{
+    float: right;
+    text-align: right;
+    margin: 0;
+}
+.experiences h3{
+    float: left;
+    width:100%;
+    text-align: left;
+    padding: 20px 0px 30px 20px;
+    margin: 0px;
+}
+.experiences h4{
+    float: left;
+    text-align: left;
+    margin: 10px;
+    width: 100%;
+}
+.experiences p{
+    float: left;
+    text-align: left;
+    margin: 10px;
+    width: 100%;
+}
+.educations{
+    width: 100%;
+    background-color: rgba(127, 255, 212, 0.7);
+    margin-top: 5px;
+    float: left;
+    padding-bottom: 20px;
+}
+.educations h3{
+    text-align: center;
+    background-color: aquamarine;
+    padding:  20px;
+    margin: 0;
+
+}
+.container{
+    margin: 20px auto;
+    width: 40%;
+}
+.edu_left{
+    float: left;
+    width: 100%;
+    border-color: darkgreen;
+    border-style: solid none solid solid;
+    padding:10px;
+    text-align: left;
+}
+.edu_right{
+    float: left;
+    width: 100%;
+    border-color: darkgreen;
+    border-style: none solid none none;
+    padding:10px;
+    text-align: right;
+}
+
+.courses{
+    width: 100%;
+    background-color: aquamarine;
+    margin-top: 5px;
+    float: left;
+    padding-bottom: 20px;
+}
+.courses h3{
+    text-align: center;
+    background-color: rgba(180, 255, 230, 0.9);
+    margin: 0px;
+    padding:15px;
+}
+.course{
+    width: 50%;
+    height: 90px;
+    background-color: rgba(180, 255, 230, 0.9);
+    float: left;
+}
+.course h4, .course p{
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+.footer{
+    background-image: url(../images/wallpaperflare.com_wallpaper.jpg);
+    background-position-y: center;
+    height: 120px;
+    float: left;
+    width: 100%;
+    padding: 20px 30px;
+    color: whitesmoke;
+    margin-top: 5px;
+}
+
+.listfooter ul{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+.listfooter li{
+    height: 24px;
+    list-style: none;
+    margin: 5px;
+}
+.footer h2{
+    float: left;
+}
+.footer a{
+    float: left;
+    color: darkblue;
+    text-decoration: none;
+
+}
+.footer img{
+    float: left;
+    margin-right: 5px;
+
+}
+.button {
+  border: none;
+  color: darkcyan;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {
+    background-color: white;
+}
+.button1:hover {
+  background-color: skyblue;
+  color: white;
+}
+@media(min-width:670px) and(max-width:1024px){
+    .photo_name {
+        margin: 0 auto;
+        width: 70%;
+        align-items: center;
+        float: none;
+    }
+    .photo_name img {
+        width: 250px;
+        height: 250px;
+        float: none;
+        display: flex;
+        margin: 20px auto;
+    }
+    .photo_name h1{
+        float: none;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .flex_box {
+        flex-wrap: wrap;
+    }
+    .flex_box li {
+        width: 50%;
+    }
+    .flex_box p {
+        text-align: center;
+    }
+    .container {
+        width: 70%;
+    }
+    .button {
+  border: none;
+  color: darkcyan;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {
+    background-color: white;
+}
+.button1:hover {
+  background-color: skyblue;
+  color: white;
+}
+}
+        </style>
+        
+    </head>
+    <body>
+        <div class="profile">
+            <div class="wrapper_profile">
+                <div class="photo_name">
+                    <img src="David.jpeg">
+                    <h1>Ahmad David Gibran</h1>
+                </div>
+                <div class="detail_profile">
+                    <h3>Born</h3>
+                    <p>Mei 31, 2004 (Age 18), Lahat,Sumatera Selatan, Indonesia</p>
+                    <h3>Address</h3>
+                    <p>Kota Jaya,Lahat,Sumatera Selatan</p>
+                    <h3>Telp</h3>
+                    <p>0815-xxxx-09xx</p>
+                    <h3>Email</h3>
+                    <p>Wongcoco42@gmail.com</p>
+                    <h3>Gender</h3>
+                    <p>Male</p>
+                </div>
+            </div>
+        </div>
+        <div class="hobbies">
+            <h3>Hobbies</h3>
+            <ul class="flex_box">
+                <li>
+                    <img src="download.jpg">
+                    <h4>Gamers</h4>
+                    <p>I've loved playing games since I was a kid and until now it's still my hobby</p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="educations">
+            <h3>Educations</h3>
+            <div class="container">
+                <div class="edu_left">
+                    <h4>Elementary School</h4>
+                    <p>SDN Negeri 27 Lahat</p>
+                </div>
+                <div class="edu_right">
+                    <h4>Junior Hight School</h4>
+                    <p>SMP Muhammadiyah Lahat</p>
+                </div>
+                <div class="edu_left">
+                    <h4>Senior Hight School</h4>
+                    <p>SMA Negeri 3 Lahat</p>
+                </div>
+            </div>
+        </div>
+        <p><a href="index.html" class="button button1">Back</a></p>
+    </body>
+</html>

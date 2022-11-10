@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* VARIABLES */
+:root {
+    --base: #f8f9fa;
+    --primary: #343a40;
+    --secondary: #17a2b8;
+}
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+/* LAYOUT */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 600px;
+    background: var(--base);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0px 10px 25px #333;
+    margin: 1.5rem;
+}
+.container .left_side {
+    background: var(--primary);
+    padding: 1.5rem;
+}
+.container .right_side {
+    background: var(--base);
+    padding: 1.5rem;
+}
+
+/* LEFT SIDE ITEMS */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    color: var(--base);
+    border-bottom: 1px solid var(--base);
+}
+.profile .img_setting {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile .img_setting img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile h4 {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+    font-weight: 600;
+}
+.profile h5 {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    font-weight: 300;
+    line-height: 1rem;
+}
+.profile .btn {
+    margin-top: 0.8rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.profile .btn:hover{
+    background: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+.left_items {
+    margin-top: 1.2rem;
+    color: var(--base);
+}
+.left_items .title {
+    padding-bottom: 0.5rem;
+}
+.left_items ul li {
+    list-style: none;
+    margin-bottom: 0.2rem;
+}
+.left_items ul li .icons {
+    display: inline-block;
+    width: 1.2rem;
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+.left_items ul li .text {
+    font-weight: 300;
+}
+.left_items ul li .dates {
+    color: var(--secondary);
+    font-weight: 400;
+}
+.languages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.languages li {
+    margin-right: 1rem;
+}
+.languages .percent {
+    width: 100%;
+    height: 0.4rem;
+    background: black;
+    display: block;
+    margin-top: 0.4rem;
+}
+.languages .percent div {
+    width: 100%;
+    height: 0.4rem;
+    background: var(--secondary);
+}
+
+/* RIGHT SIDE ITEMS */
+.right_items {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+.right_items .title {
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+.experience {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+.experience .time_line {
+    margin-top: 1px;
+}
+.experience .time_line .time_point {
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+    background: var(--secondary);
+    border-radius: 50%;
+}
+.experience .time_line .time_road {
+    width: 0.2rem;
+    height: 100%;
+    display: block;
+    background: var(--secondary);
+    transform: translate(0.5rem, 0);
+}
+.experience .content {
+    display: grid;
+    grid-template-columns: 10rem auto;
+}
+.experience .content .interval {
+    color: var(--primary);
+    min-width: 10rem;
+    text-align: center;
+    font-weight: 400;
+}
+.experience .content .description h4 {
+    color: var(--secondary);
+}
+.skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    margin: 1rem 0;
+}
+.skills .percent {
+    width: 100%;
+    height: 0.8rem;
+    background: var(--primary);
+}
+.skills .percent div {
+    width: 100%;
+    height: 0.8rem;
+    background: var(--secondary);
+}
+.hobby {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.hobby li {
+    list-style: none;
+    width: 2rem;
+    font-size: 1.2rem;
+}
+.hobby li .bx {
+    color: var(--secondary);
+    width: 2rem;
+    font-size: 1.2rem;
+}
+/* RESPONSIVE SETTINGS */
+@media (max-width: 800px){
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 500px){
+    .experience .content {
+        grid-template-columns: 1fr;
+        margin: 0 3rem;
+    }
+    .hobby {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hobby li {
+        margin-bottom: 1rem;
+    }
+}
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="left_side">
+
+            <!-- PROFILE -->
+            <div class="profile">
+                <div class="img_setting">
+                    <img src="cv.jpeg">
+                </div>
+                <h4>Ahmad David Gibran</h4>
+                <h5>Mahasiswa</h5>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="left_items">
+                <h4 class="title">Contact Info</h4>
+                <ul>
+                    <li>
+                        <span class="icons">
+                            <i class="bx bx-map"></i>
+                        </span>
+                        <span class="text">www.coco3105.com</span>
+                    </li>
+                    <li>
+                        <span class="icons">
+                            <i class="bx bx-envelope"></i>
+                        </span>
+                        <span class="text">contact@davidgibran.com</span>
+                    </li>
+                    <li>
+                        <span class="icons">
+                            <i class="bx bx-phone"></i>
+                        </span>
+                        <span class="text">+62 442 091 852</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="left_items">
+                <h4 class="title">Education</h4>
+                <ul>
+                    <li>
+                        <h5 class="dates">2008 - 2020</h4>
+                        <h4 class="text">TK YWKA,SDN 27,SMPN 2,SMAN 3</h5>
+                        <h4 class="text">School Name</h5>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CERTIFICATINS -->
+            <div class="left_items">
+                <h4 class="title">Interest</h4>
+                <ul>
+                    <li>
+                        <h5 class="text">Swimming</h5>
+                        <h4 class="text">Gamming</h4>
+                        <h4 class="text">Reading</h4>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- LANGUAGES -->
+            <div class="left_items">
+                <h4 class="title">Languages</h4>
+                <ul class="languages">
+                    <li>
+                        <span class="text">Indonesia</span>
+                        <div class="percent">
+                            <div style="width: 95%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="text">English</span>
+                        <div class="percent">
+                            <div style="width: 75%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="right_side">
+
+            <!-- SUMMARY -->
+            <div class="right_items">
+                <h3 class="title">About</h3>
+                <p>Halo... Ini Cerita Pelatihan Dan Training yang pernah saya ikuti.Saya pernah mengikuti Taekwondo,Basket,Renang,Sepak Bola</p>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="right_items">
+                <h4 class="title">Education</h4>
+
+                <div class="experience">
+                    <div class="time_line">
+                        <span class="time_point"></span>
+                        <span class="time_road"></span>
+                    </div>
+                    <div class="content">
+                        <div class="interval">
+                            <h5>2008 - 2014</h5>
+                            <h5>Primary</h5>
+                            <h5>School</h5>
+                        </div>
+                        <div class="description">
+                            <h4>Siswa</h4>
+                            <p>Saya Pernah Mengikuti Ekstrakulikuler Taekwondo Diwaktu Sekolah Dasar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience">
+                    <div class="time_line">
+                        <span class="time_point"></span>
+                        <span class="time_road"></span>
+                    </div>
+                    <div class="content">
+                        <div class="interval">
+                            <h5>2014 - 2017</h5>
+                            <h5>Junior</h5>
+                            <h5>High</h5>
+                            <h5>School</h5>
+                        </div>
+                        <div class="description">
+                            <h4>Junior High School</h4>
+                            <p>Saya Pernah Mengikuti Ekstrakulikuler Basket dan Sepak Bola Sewaktu SMP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="time_line">
+                        <span class="time_point"></span>
+                        <span class="time_road"></span>
+                    </div>
+                    <div class="content">
+                        <div class="interval">
+                            <h5>2017 - 2020</h5>
+                            <h5>Senior</h5>
+                            <h5>High</h5>
+                            <h5>School</h5>
+                        </div>
+                        <div class="description">
+                            <h4>Senior High School</h4>
+                            <p>Saya Tidak Mengikuti Ekstrakulikuler Apapun Sewaktu SMA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="time_line">
+                        <span class="time_point"></span>
+                        <span class="time_road"></span>
+                    </div>
+                    <div class="content">
+                        <div class="interval">
+                            <h5>2021 - ?</h5>
+                            <h5>Institute</h5>
+                            <h5>Teknologi</h5>
+                            <h5>PLN</h5>
+                        </div>
+                        <div class="description">
+                            <h4>College Student</h4>
+                            <p>Saya Tidak Mengikuti Organisasi Apapun Pada Saat Berkuliah Sekarang.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SKILLS -->
+            <div class="right_items">
+                <h4 class="title">Professional Skills</h4>
+                <div class="skills">
+                    <h4>HTML</h4>
+                    <div class="percent">
+                        <div style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                        <div style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h4>JavaScript</h4>
+                    <div class="percent">
+                        <div style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOBBIES -->
+            <div class="right_items">
+                <h4 class="title">Hobbies</h4>
+                <ul class="hobby">
+                    <li><i class="bx bx-swim"></i> Swimming</li>
+                    <li><i class="bx bxs-game"></i> Gamming</li>
+                    <li><i class="bx bx-book"></i> Reading</li>
+                </ul>
+            </div>
+            <p><a href="index.html" class="button button1">Back</a></p>
+        </div>
+        
+    </div>
+    
+
+    <!-- HTML2PDF SOURCE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- CUSTOM JS -->
+    <script type="text/javascript">
+    
+        function PDF(){
+            const e = document.querySelector(".container");
+
+            // RESIZE
+            e.style.maxWidth = "700px";
+            
+            // OPTIONS
+            const opt = {
+                filename: 'resume.pdf',
+                image: {
+                    type: "jpg",
+                    quality: 0.99
+                },
+                margin: 0,
+                jsPDF: {
+                    unit: "pt",
+                    format: "letter",
+                    orientation: "portrait"
+                },
+                pagebreak: {
+                    mode: ["avoid-all", "css", "legacy"]
+                }
+            };
+            html2pdf().set(opt).from(e).save();
+
+            // RESIZE
+            setTimeout(() => {e.style.maxWidth = "1400px";}, 2000);
+        }
+
+    </script>
+    
+</body>
+</html>
